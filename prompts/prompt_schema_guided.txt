@@ -1,0 +1,24 @@
+Generate a BPMN 2.0 process model in XML format using the Camunda-compatible structure shown below as a mandatory template. But do not generate in this promt, just save and analyze this informations. 
+
+You must strictly preserve the XML structure, namespaces, and hierarchy of the provided example. All generated elements must conform to BPMN 2.0 and Camunda execution requirements. 
+
+The generated BPMN model MUST satisfy the following constraints: 
+- Exactly one executable bpmn:process element. 
+- At least one start event and at least one end event. 
+- All BPMN elements must have unique identifiers. 
+- All tasks, gateways, and intermediate events must have a non-empty name attribute. 
+- Every sequenceFlow must define both sourceRef and targetRef referencing existing elements. 
+- All BPMN elements must be represented in BPMN-DI using bpmndi:BPMNShape or bpmndi:BPMNEdge. 
+- Every BPMN-DI shape must include dc:Bounds. 
+- Do not introduce any process elements that were not identified in previous extraction steps. 
+- All outgoing sequence flows from decision points (e.g., exclusive gateways) MUST have a non-empty name attribute that clearly describes the decision outcome. 
+- Do NOT use pools or lanes. The process must be modeled as a single process without lane-based partitioning. 
+- Tasks MUST be modeled using appropriate BPMN task types based on their role in the process: 
+- Use userTask for activities performed by human actors. 
+- Use serviceTask for automated or system-executed activities. 
+- Use scriptTask for internal data processing or transformation logic. 
+- Use businessRuleTask for decision logic or rule-based evaluation. 
+- Generic bpmn:task elements MUST NOT be used unless no more specific task type applies. 
+
+Use the following XML structure as a mandatory template: 
+<?xml version="1.0" encoding="UTF-8"?> <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0i3pgsi" targetNamespace="http://bpmn.io/schema/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" exporter="Camunda Modeler" exporterVersion="5.33.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0"> <bpmn:process id="Process_1juweid" isExecutable="true" > <bpmn:startEvent id="StartEvent_1" /> </bpmn:process> <bpmndi:BPMNDiagram id="BPMNDiagram_1"> <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1juweid"> <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1"> <dc:Bounds x="182" y="162" width="36" height="36" /> </bpmndi:BPMNShape> </bpmndi:BPMNPlane> </bpmndi:BPMNDiagram> </bpmn:definitions>

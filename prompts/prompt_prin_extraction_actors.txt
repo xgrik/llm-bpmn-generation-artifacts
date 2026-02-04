@@ -1,0 +1,19 @@
+Based on the provided healthcare process document, identify all actors (participants, roles, organizational units, or systems) that actively participate in the execution of the described process. 
+
+Actors may include both human roles (e.g., clinicians, nurses) and technical systems (e.g., healthcare information systems, decision support systems). 
+
+Only include actors that: 
+- perform actions, 
+- make decisions, or 
+- are directly responsible for steps within the process. 
+
+List each actor with a short justification based on the source document. Do not include actors that are only mentioned for context or background. 
+
+From the same healthcare process document, identify actors that are mentioned in the text but should NOT be included as participants in the BPMN process model. 
+
+These may include: 
+- informational roles, 
+- external stakeholders not involved in execution, 
+- entities referenced only for context, regulation, or reporting. 
+
+For each identified actor, briefly explain why it is excluded from the process model.

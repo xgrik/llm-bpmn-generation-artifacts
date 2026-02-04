@@ -1,0 +1,14 @@
+The following BPMN XML contains errors identified during validation or manual inspection.
+
+[INSERT VALIDATION ERRORS, EXECUTION ERRORS, OR LAYOUT ISSUES HERE]
+
+Your task is to repair the existing BPMN XML while preserving the original process structure and semantics.
+
+Requirements:
+- fix only the reported issues,
+- do not introduce new process elements,
+- do not remove valid existing elements,
+- preserve all previously identified actors, tasks, and decision points,
+- ensure the repaired model remains executable and structurally consistent.
+
+Return only the corrected BPMN XML without explanations or additional text.

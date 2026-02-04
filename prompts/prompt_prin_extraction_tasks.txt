@@ -1,0 +1,15 @@
+Identify all process tasks or activities that should be modeled as BPMN tasks based on the document. 
+
+Include only actions that represent concrete steps in the process execution. 
+
+Describe each task briefly and reference the part of the document it is derived from. 
+
+Identify actions or activities mentioned in the document that should NOT be modeled as BPMN tasks. 
+
+These may include: 
+- high-level goals, 
+- recommendations, 
+- background explanations, 
+- clinical guidelines without operational steps. 
+
+Explain why each identified item is excluded.

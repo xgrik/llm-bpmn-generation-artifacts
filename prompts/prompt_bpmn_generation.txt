@@ -1,0 +1,52 @@
+Generate the final BPMN 2.0 process model in XML format based exclusively on the previously identified process actors, tasks, decision points, and control-flow logic. 
+
+You must synthesize all extracted information into a single, coherent, system-oriented BPMN process model that is: 
+- understandable and readable for human experts, 
+- structurally correct and executable, 
+- suitable for deployment in a healthcare information system. Use ONLY the process elements that were explicitly identified in previous steps. 
+Do NOT introduce any new actors, tasks, events, or decision points. 
+
+----------------------------------- 
+MANDATORY STRUCTURE AND SCHEMA 
+----------------------------------- 
+
+The BPMN XML MUST strictly follow the Camunda-compatible structure shown below. Preserve all namespaces, hierarchy, and structural elements. 
+
+<?xml version="1.0" encoding="UTF-8"?> <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0i3pgsi" targetNamespace="http://bpmn.io/schema/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" exporter="Camunda Modeler" exporterVersion="5.33.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.22.0"> <bpmn:process id="Process_1juweid" isExecutable="true" > <bpmn:startEvent id="StartEvent_1" /> </bpmn:process> <bpmndi:BPMNDiagram id="BPMNDiagram_1"> <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1juweid"> <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1"> <dc:Bounds x="182" y="162" width="36" height="36" /> </bpmndi:BPMNShape> </bpmndi:BPMNPlane> </bpmndi:BPMNDiagram> </bpmn:definitions> 
+
+----------------------------------- 
+MANDATORY CONSTRAINTS 
+----------------------------------- 
+The generated BPMN model MUST satisfy all of the following constraints: 
+- Exactly one bpmn:process element with isExecutable="true". 
+- At least one start event and at least one end event. 
+- All BPMN elements must have unique identifiers. 
+- All tasks, gateways, and intermediate events must have a non-empty name attribute. 
+- Every bpmn:sequenceFlow must define both sourceRef and targetRef attributes, referencing existing BPMN elements. 
+- Gateways must have at least one incoming and two outgoing sequence flows. 
+- All BPMN elements must be represented in BPMN-DI using bpmndi:BPMNShape or bpmndi:BPMNEdge elements. 
+- Every BPMN-DI shape must include dc:Bounds with explicit coordinates. 
+- All BPMN-DI elements must reference existing BPMN elements. 
+- Do not include any BPMN elements without a corresponding diagram representation. 
+- All outgoing sequence flows from decision points (e.g., exclusive gateways) MUST have a non-empty name attribute that clearly describes the decision outcome. 
+- Do NOT use pools or lanes. The process must be modeled as a single process without lane-based partitioning. 
+- Tasks MUST be modeled using appropriate BPMN task types based on their role in the process: 
+- Use userTask for activities performed by human actors. 
+- Use serviceTask for automated or system-executed activities. 
+- Use scriptTask for internal data processing or transformation logic. 
+- Use businessRuleTask for decision logic or rule-based evaluation. 
+- Generic bpmn:task elements MUST NOT be used unless no more specific task type applies. 
+
+----------------------------------- 
+MODEL ORIENTATION 
+----------------------------------- 
+The process model must reflect a system-oriented perspective, capturing both: 
+- human activities, and 
+- system-supported or automated behavior. 
+
+Assign tasks appropriately to human or system actors based on the extracted information. 
+
+----------------------------------- 
+OUTPUT FORMAT 
+----------------------------------- 
+Return ONLY the final BPMN XML in ready to copy-paste format. Do not include explanations, comments, or additional text.

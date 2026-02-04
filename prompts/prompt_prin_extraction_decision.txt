@@ -1,0 +1,11 @@
+Identify all decision points in the document that influence the control flow of the process and should be represented as BPMN gateways. 
+
+Include only decisions that: 
+- lead to different subsequent actions, 
+- affect the progression of the process. 
+
+Briefly describe each decision and its possible outcomes. 
+
+Identify conditional statements or assessments mentioned in the document that should NOT be modeled as BPMN decision points. 
+
+Explain why these conditions do not affect the process control flow or are not relevant for BPMN modeling.

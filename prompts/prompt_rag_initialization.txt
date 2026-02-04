@@ -1,0 +1,12 @@
+The following document describes a healthcare-related procedure titled: 
+
+"Komplexný psychologický manažment dospelého pacienta s chronickou bolesťou" 
+
+Your task is to carefully read and analyze the provided document and assess whether it contains sufficient procedural information to be represented as a BPMN process model. 
+
+Focus on identifying whether the document: 
+- describes a sequence of activities or actions, 
+- includes decision points, roles, or responsibilities, 
+- implies control-flow relations between steps. 
+
+Do not generate any BPMN elements at this stage. Only analyze the document and confirm whether it is suitable for BPMN-based process modeling.
