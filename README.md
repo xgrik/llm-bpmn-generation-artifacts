@@ -52,7 +52,7 @@ All prompts are provided in their original form as used during the experiments.
 
 This directory contains an example of a final BPMN process model generated using the proposed workflow.
 
-- **DOC1_final_bpmn.xml** – Final BPMN process model generated from **DOC1** using the multi-step LLM-based workflow
+- **DOC1_final_bpmn.svg** – Final BPMN process model generated from **DOC1** using the multi-step LLM-based workflow
 
 ---
 
@@ -65,3 +65,4 @@ This directory contains an example of a final BPMN process model generated using
 
 This repository is provided for academic and research use.  
 Please cite the corresponding publication when using the materials.
+
